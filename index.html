@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nigerian Ports Consultative Council</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Live Background Canvas */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .navbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            backdrop-filter: blur(20px);
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-top: -75px;
+            background: #fff;
+        }
+
+        .card h2,
+        .card h3 {
+            color: #fff;
+        }
+
+        .card h4 {
+            color: #70b77e;
+        }
+
+        .card p {
+            color: #ddd;
+            margin: 20px 0;
+            font-size: 1em;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #70b77e;
+            margin: 0 15px;
+            font-size: 2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #50a050;
+            transform: scale(1.2);
+        }
+
+        .download-link {
+            margin-top: 30px;
+            text-decoration: none;
+            color: #fff;
+            background: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: #555;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1em;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer a {
+            color: #ff7e5f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            color: #feb47b;
+        }
+
+        @media (max-width: 768px) {
+            .card img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .social-links a {
+                margin: 0 10px;
+                font-size: 1.5em;
+            }
+
+            .footer {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .navbar {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Live Background Canvas -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Navbar -->
+    <div class="navbar">Nigerian Ports Consultative Council</div>
+
+    <div class="content-wrapper">
+        <!-- Card -->
+        <div class="card">
+            <img src="static/img/pcc1.jpg" alt="CEO Photo">
+
+            <h2>Bolaji Sunmola</h2>
+            <hr>
+            <h4>Nigerian Ports Consultative Council</h4>
+            <h3>Chairman</h3>
+            <div class="social-links">
+                <!-- Social Icons -->
+                <a href="https://wa.me/+2348037272864" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:npccouncil@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:08037272864"><i class="fas fa-phone"></i></a>
+                <a href="https://www.google.com/maps/place/21+Marina+Rd,+Lagos+Island,+Lagos+102273,+Lagos" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+
+            <br>
+            <br>
+
+            <a href="static/NPCC.zip" class="download-link">Download Card</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Designed By <a href="https://wa.me/2348155114430">CobWeb</a>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('backgroundCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Resize canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Particles
+        const particles = Array.from({ length: 400 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 1 + 0.5,
+            speedX: Math.random() * 3 - 1.5,
+            speedY: Math.random() * 0.5 + 0.5,
+            color: `rgba(194, 178, 128, ${Math.random() * 0.5 + 0.2})`
+        }));
+
+        function drawParticle(particle) {
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fillStyle = particle.color;
+            ctx.fill();
+        }
+
+        function updateParticles() {
+            particles.forEach(particle => {
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+
+                // Wrap around edges
+                if (particle.x > canvas.width) particle.x = 0;
+                if (particle.x < 0) particle.x = canvas.width;
+                if (particle.y > canvas.height) particle.y = 0;
+            });
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(22, 21, 19, 0.6)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(drawParticle);
+            updateParticles();
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>
